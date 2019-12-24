@@ -40,7 +40,7 @@ class FiguresController < ApplicationController
     @figure.titles << Title.create(params[:titles]) if params[:title][:name]
     @figure.save
     redirect "/figures/#{@figure.id}"
-  end 
+  end
 
   get '/figures/:id' do
     @figure = Figure.find(params[:id])
